@@ -63,7 +63,8 @@ class Student
     SQL
 
     student = DB[:conn].execute(sql, name)
-    student.first
+    new_from_db(student)
+
   end
 
 end
