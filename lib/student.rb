@@ -65,7 +65,7 @@ class Student
       SELECT * FROM students
       WHERE name = ?
     SQL
-
+    binding.pry
     student = new_from_db(DB[:conn].execute(sql, name).first)
     student
   end
