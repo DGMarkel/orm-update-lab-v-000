@@ -12,5 +12,13 @@ class Student
     @grade = grade
   end
 
+  def drop_table
+    sql = <<-SQL
+      DROP TABLE students;
+    SQL
+
+    DB[:conn].exec(sql)
+  end
+
 
 end
