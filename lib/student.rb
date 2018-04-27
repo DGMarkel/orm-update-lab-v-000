@@ -62,6 +62,7 @@ class Student
     end.first
 
     student
+    binding.pry
   end
 
 end
