@@ -62,8 +62,7 @@ class Student
       WHERE name = ?
     SQL
 
-    student = DB[:conn].execute(sql, name)
-    binding.pry
+    student = DB[:conn].execute(sql, name).flatten
     new_from_db(student)
 
   end
