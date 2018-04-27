@@ -65,8 +65,9 @@ class Student
       SELECT * FROM students
       WHERE name = ?
     SQL
-    student = new_from_db(DB[:conn].execute(sql, name))
-    student.first
+    student = DB[:conn].execute(sql, name)
+    student = self.new_from_db(student.first)
+    student
   end
 
   def update
