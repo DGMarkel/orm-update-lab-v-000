@@ -50,7 +50,7 @@ class Student
     student
   end
 
-  def new_from_db(row)
+  def self.new_from_db(row)
     sql = <<-SQL
       SELECT * FROM students
       SQL
@@ -62,6 +62,6 @@ class Student
       end
 
     student
-  end  
+  end
 
 end
