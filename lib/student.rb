@@ -51,9 +51,9 @@ class Student
   end
 
   def new_from_db(row)
-    sql = <<-SQL 
+    sql = <<-SQL
       SELECT * FROM students
-      SQL 
+      SQL
 
     student = DB[:conn].execute(sql).map do |row|
       self.id = row[0]
@@ -63,5 +63,5 @@ class Student
 
     student
   end  
-    
+
 end
