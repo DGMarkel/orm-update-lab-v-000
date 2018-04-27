@@ -51,6 +51,7 @@ class Student
   def self.create(name, grade)
     student = self.new(name, grade)
     student.save
+    @@all << student
     student
   end
 
@@ -66,8 +67,8 @@ class Student
       WHERE name = ?
     SQL
     binding.pry
-    student = new_from_db(DB[:conn].execute(sql, name).first)
-    student
+    student = new_from_db(DB[:conn].execute(sql, name))
+    student.first
   end
 
   def update
