@@ -12,7 +12,7 @@ class Student
     @grade = grade
   end
 
-  def create_table
+  def self.create_table
     sql = <<-SQL
       CREATE TABLE students(
         id INTEGER PRIMARY KEY,
@@ -25,7 +25,7 @@ class Student
 
   end
 
-  def drop_table
+  def self.drop_table
     sql = <<-SQL
       DROP TABLE students;
     SQL
