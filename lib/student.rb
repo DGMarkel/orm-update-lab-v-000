@@ -61,7 +61,7 @@ class Student
       self.grade = row[2]
       end
 
-    student
+    student.first
   end
 
 end
