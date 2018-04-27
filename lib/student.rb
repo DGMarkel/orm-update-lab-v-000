@@ -62,8 +62,8 @@ class Student
       WHERE name = ?
     SQL
 
-    student = DB[:conn].execute(sql, name).flatten
-    new_from_db(student)
+    student = DB[:conn].execute(sql, name)
+    new_from_db(student.first)
 
   end
 
