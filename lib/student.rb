@@ -63,6 +63,7 @@ class Student
   end
 
   def self.find_by_name(name)
+    binding.pry
     @@all.detect {|student| student.name == name}
   end
 
