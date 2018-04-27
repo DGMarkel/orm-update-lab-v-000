@@ -59,9 +59,9 @@ class Student
       self.id = row[0]
       self.name = row[1]
       self.grade = row[2]
-      end
+    end.first
 
-    student.first
+    student
   end
 
 end
