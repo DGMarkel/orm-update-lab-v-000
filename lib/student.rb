@@ -13,18 +13,18 @@ class Student
   end
 
   def create_table
-    sql = <<-SQL 
+    sql = <<-SQL
       CREATE TABLE students(
         id INTEGER PRIMARY KEY,
         name TEXT,
         grade INTEGER
       );
-      SQL 
+      SQL
 
     DB[:conn].exec(sql)
 
   end
-      
+
   def drop_table
     sql = <<-SQL
       DROP TABLE students;
