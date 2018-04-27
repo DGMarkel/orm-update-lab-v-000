@@ -63,13 +63,7 @@ class Student
   end
 
   def self.find_by_name(name)
-    sql = <<-SQL
-      SELECT * FROM students
-      WHERE name = ?
-    SQL
-    binding.pry
-    student = new_from_db(DB[:conn].execute(sql, name))
-    student.first
+    @@all.detect {|student| student.name == name}
   end
 
   def update
