@@ -63,7 +63,7 @@ class Student
     SQL
 
     student = DB[:conn].execute(sql, name)
-    binding.pry
+    student.first
   end
 
 end
